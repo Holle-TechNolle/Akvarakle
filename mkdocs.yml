@@ -1,0 +1,8 @@
+site_name: AKARAKLE
+nav:
+  - Home: index.md
+  - Database:
+      - Model: model.md
+      - ER Diagram: er-diagram.md
+  - API:
+      - Overview: api-overview.md
