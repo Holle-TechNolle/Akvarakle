@@ -1,8 +1,45 @@
 {
-    "python.pythonPath": "./venv/bin/python",
+    "python.pythonPath": "./venv/Scripts/python.exe",  // På Windows
+    "python.venvPath": "./venv",
+
     "editor.formatOnSave": true,
+    "files.trimTrailingWhitespace": true,
+    
     "files.exclude": {
         "**/__pycache__": true,
-        "**/*.pyc": true
+        "**/*.pyc": true,
+        "**/venv/": true
+    },
+
+    "sqltools.connections": [
+        {
+            "name": "Akvarakle Local",
+            "driver": "MySQL",
+            "server": "localhost",
+            "port": 3306,
+            "username": "root",
+            "password": "FiskePatter.",
+            "database": "Akvarakle"
+        }
+    ],
+    "sqltools.autoConnectTo": "Akvarakle Local",
+
+    "launch": {
+        "configurations": [
+            {
+                "name": "Python: Current File",
+                "type": "python",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+                "justMyCode": true
+            }
+        ]
+    },
+
+    "prettier.sql": {
+        "tabWidth": 4,
+        "keywordCase": "upper",
+        "indentStyle": "tabularRight"
     }
 }

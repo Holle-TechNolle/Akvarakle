@@ -1,0 +1,4 @@
+# Required Python packages for Akvarakle project
+mysql-connector-python==8.0.33  # For MySQL integration
+mkdocs==1.4.3                  # For documentation generation
+mkdocs-material==9.2.3         # Material theme for MkDocs
