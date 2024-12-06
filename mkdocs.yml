@@ -1,4 +1,8 @@
-site_name: AKARAKLE
+site_name: Akvarakle Documentation
+site_description: Comprehensive documentation for the Akvarakle project.
+site_author: Your Name
+theme:
+  name: readthedocs
 nav:
   - Home: index.md
   - Database:
@@ -6,3 +10,15 @@ nav:
       - ER Diagram: er-diagram.md
   - API:
       - Overview: api-overview.md
+  - ADRs:
+      - "ADR 001: Database Platform Choice": adr/001-database-platform-choice.md
+      - "ADR 002: Development Language": adr/002-development-language.md
+      - "ADR 003: Documentation Tool": adr/003-documentation-tool.md
+      - "ADR 004: Virtual Environments": adr/004-virtual-environments.md
+      - "ADR 005: Database Design Principles": adr/005-database-design-principles.md
+      - "ADR 006: API Architecture": adr/006-api-architecture.md
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code
