@@ -1,0 +1,221 @@
+digraph "Updated ER Diagram" {
+	rankdir=LR size=12
+	Plant [label="Plant
+- ID
+- CommonName_DaDK
+- GenusID
+- SpeciesID
+- SubspeciesID
+- VarietyID
+- CultivarID
+- HeightRangeID
+- EnvironmentID"]
+	Fish [label="Fish
+- ID
+- CommonName_DaDK
+- GenusID
+- SpeciesID
+- SubspeciesID
+- SizeRangeID
+- DietID
+- EnvironmentID
+- BehaviorID
+- ReproductionID"]
+	Genus [label="Genus
+- ID
+- Name_DaDK
+- Description_DaDK"]
+	Species [label="Species
+- ID
+- Name_DaDK
+- GenusID
+- Description_DaDK"]
+	Subspecies [label="Subspecies
+- ID
+- Name_DaDK
+- SpeciesID
+- Description_DaDK"]
+	Variety [label="Variety
+- ID
+- Name_DaDK
+- Description_DaDK"]
+	Cultivar [label="Cultivar
+- ID
+- Name_DaDK
+- Description_DaDK"]
+	WaterColumn [label="Water Column
+- ID
+- Type_DaDK"]
+	FishWaterColumn [label="FishWaterColumn
+- FishID
+- WaterColumnID"]
+	Environment [label="Environment
+- ID
+- pHRangeID
+- HardnessRangeID
+- TemperatureRangeID
+- NitrogenRangeID
+- OxygenRangeID
+- CO2RangeID"]
+	Behavior [label="Behavior
+- ID
+- SocialBehaviorID
+- ActivityLevelID
+- Description_DaDK"]
+	SocialBehavior [label="SocialBehavior
+- ID
+- Name_DaDK
+- Description_DaDK"]
+	ActivityLevel [label="ActivityLevel
+- ID
+- Level_DaDK
+- Description_DaDK"]
+	Reproduction [label="Reproduction
+- ID
+- SpawningTypeID
+- CareTypeID
+- Description_DaDK"]
+	SpawningType [label="SpawningType
+- ID
+- Name_DaDK
+- Description_DaDK"]
+	CareType [label="CareType
+- ID
+- Name_DaDK
+- Description_DaDK"]
+	Diet [label="Diet
+- ID
+- DietCategoryID
+- DietSubCategoryID
+- Description_DaDK"]
+	DietCategory [label="DietCategory
+- ID
+- Name_DaDK
+- Description_DaDK"]
+	DietSubCategory [label="DietSubCategory
+- ID
+- Name_DaDK
+- Description_DaDK"]
+	pHRange [label="pH Range
+- ID
+- Min
+- Max"]
+	HardnessRange [label="Hardness Range
+- ID
+- Min_dH
+- Max_dH"]
+	TemperatureRange [label="Temperature Range
+- ID
+- Min_Celsius
+- Max_Celsius"]
+	NitrogenRange [label="Nitrogen Range
+- ID
+- Min_mgL
+- Max_mgL"]
+	OxygenRange [label="Oxygen Range
+- ID
+- Min_mgL
+- Max_mgL"]
+	CO2Range [label="CO2 Range
+- ID
+- Min_mgL
+- Max_mgL"]
+	SubstrateType [label="SubstrateType
+- ID
+- Type_DaDK
+- Description_DaDK"]
+	PlantSubstrate [label="PlantSubstrate
+- PlantID
+- SubstrateTypeID"]
+	LightIntensity [label="LightIntensity
+- ID
+- Range_WpL"]
+	PlantLight [label="PlantLight
+- PlantID
+- LightIntensityID"]
+	Region [label="Region
+- ID
+- Name_DaDK"]
+	PlantRegion [label="PlantRegion
+- PlantID
+- RegionID"]
+	Localization [label="Localization
+- ID
+- EntityType
+- EntityCategory
+- EntityID
+- Language
+- CultureCode
+- Context
+- LocalizedType_DaDK
+- Description_DaDK"]
+	Context [label="Context
+- ID
+- Name_DaDK
+- LocalizedName_DaDK"]
+	ExternalResource [label="ExternalResource
+- ID
+- ResourceTypeId
+- URL
+- LastValidation
+- LastFailed
+- CredentialsId"]
+	ResourceType [label="ResourceType
+- ID
+- TypeName_DaDK
+- LocalizedName_DaDK"]
+	Credentials [label="Credentials
+- ID
+- Username
+- Password"]
+	UnitConversion [label="UnitConversion
+- FromUnit
+- ToUnit
+- Factor
+- Offset"]
+	Plant -> PlantSubstrate [label=Has]
+	PlantSubstrate -> SubstrateType [label=Includes]
+	Plant -> PlantLight [label=Has]
+	PlantLight -> LightIntensity [label=Includes]
+	Plant -> PlantRegion [label=Has]
+	PlantRegion -> Region [label="Located In"]
+	Plant -> Genus [label="Belongs To"]
+	Plant -> Species [label="Belongs To"]
+	Plant -> Subspecies [label="Belongs To"]
+	Plant -> Variety [label=Has]
+	Plant -> Cultivar [label=Has]
+	Plant -> HeightRange [label=Has]
+	Plant -> Environment [label=Needs]
+	Fish -> Environment [label=Needs]
+	Fish -> Genus [label="Belongs To"]
+	Fish -> Species [label="Belongs To"]
+	Fish -> Subspecies [label="Belongs To"]
+	Fish -> FishWaterColumn [label=Has]
+	FishWaterColumn -> WaterColumn [label="Relates To"]
+	Fish -> Behavior [label=Exhibits]
+	Behavior -> SocialBehavior [label=Has]
+	Behavior -> ActivityLevel [label=Includes]
+	Fish -> Reproduction [label="Reproduces By"]
+	Reproduction -> SpawningType [label=Uses]
+	Reproduction -> CareType [label=Includes]
+	Fish -> Diet [label=Eats]
+	Diet -> DietCategory [label="Belongs To"]
+	Diet -> DietSubCategory [label=Includes]
+	Species -> Genus [label="Part Of"]
+	Subspecies -> Species [label="Part Of"]
+	Environment -> pHRange [label=Includes]
+	Environment -> HardnessRange [label=Includes]
+	Environment -> TemperatureRange [label=Includes]
+	Environment -> NitrogenRange [label=Includes]
+	Environment -> OxygenRange [label=Includes]
+	Environment -> CO2Range [label=Includes]
+	SubstrateType -> Localization [label="Localized By"]
+	Plant -> Localization [label="Localized By"]
+	Fish -> Localization [label="Localized By"]
+	Region -> Localization [label="Localized By"]
+	WaterColumn -> Localization [label="Localized By"]
+	Localization -> Context [label=Uses]
+	ExternalResource -> ResourceType [label="Has Type"]
+	ExternalResource -> Credentials [label=Uses]
+	Localization -> UnitConversion [label="Uses Conversion"]
+}
