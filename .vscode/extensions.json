@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "ms-python.python",             // Python extension
+        "oracle.mysql-shell-for-vscode",// MySQL Shell for VS Code
+        "bierner.markdown-preview-github", // Enhanced Markdown preview
+        "eamodio.gitlens",              // GitLens for version control insights
+        "mkdocs-material.micromamba",   // Material theme for MkDocs
+        "yzhang.markdown-all-in-one",   // Markdown All in One
+        "esbenp.prettier-vscode"        // Prettier - Code formatter
+    ],
+    "unwantedRecommendations": []
+}
