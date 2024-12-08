@@ -1,24 +1,24 @@
 
-# Akvarakle Project
+# Akvarakle
 
-## Overview
+## Oversigt
 
-Akvarakle is a database-driven project focused on creating a comprehensive and well-structured system for managing data related to freshwater aquariums. This includes fish, plants, and environmental factors.
+Akvarakle er et database-drevet projekt designet til at administrere data relateret til ferskvandsakvarier, herunder fisk, planter og miljømæssige faktorer.
 
-## Objectives
+## Mål
 
-1. Develop a professional-grade solution that follows industry best practices.
-2. Provide structured and clear documentation to assist contributors, especially beginners.
-3. Create an accessible project that serves as both a functional tool and an educational resource.
+1. Udvikle en professionel løsning, der følger branchens bedste praksis.
+2. Tilbyde struktureret og klar dokumentation for at assistere bidragydere, især begyndere.
+3. Skabe et tilgængeligt projekt, der fungerer både som et funktionelt værktøj og en læringsplatform.
 
-## Key Features
+## Nøglefunktioner
 
-- A normalized database structure for storing and querying aquatic data.
-- Integration with MkDocs for project documentation.
-- Use of ADR (Architectural Decision Records) to document design choices.
+- Normaliseret databasestruktur til lagring og forespørgsel af akvariedata.
+- Integration med MkDocs til projektets dokumentation.
+- Brug af ADR (Architectural Decision Records) til at dokumentere designbeslutninger.
 
-## Development Philosophy
+## Udviklingsfilosofi
 
-- Keep tools and frameworks minimal while maintaining high quality.
-- Encourage learning through structured documentation and practical examples.
-- Optimize for simplicity and clarity to support contributors at all levels.
+- Minimere brugen af værktøjer og frameworks, mens høj kvalitet opretholdes.
+- Fremme læring gennem struktureret dokumentation og praktiske eksempler.
+- Optimere for enkelhed og klarhed for at støtte bidragydere på alle niveauer.

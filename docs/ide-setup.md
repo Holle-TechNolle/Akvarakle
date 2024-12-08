@@ -1,19 +1,18 @@
 
-# IDE Setup for Akvarakle
+# IDE Opsætning for Akvarakle
 
-## Requirements
+## Krav
 
-1. Install [VS Code](https://code.visualstudio.com/).
-2. Recommended extensions:
-   - **Python** (by Microsoft) for Python development.
-   - **MySQL** (by Oracle Corporation) for database interactions.
-   - **Prettier - Code Formatter** for consistent formatting.
-   - **MkDocs** for documentation.
+1. Installer [VS Code](https://code.visualstudio.com/).
+2. Anbefalede udvidelser:
+   - **Python** (af Microsoft) til Python-udvikling.
+   - **MySQL** (af Oracle Corporation) til databaseinteraktioner.
+   - **Prettier - Code Formatter** for konsistent formatering.
+   - **MkDocs** til dokumentation.
 
-## Steps
+## Trin
 
-1. Clone the repository.
-2. Set up a Python virtual environment:
+1. Klon repository:
    ```bash
-   python -m venv venv
+   git clone https://github.com/Holle-TechNolle/Akvarakle.git
    ```
